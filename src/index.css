@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-ivory: #F7F1E7;
+    --color-gold: #B58B3C;
+    --color-gold-light: #D4AF37;
+    --color-gold-dark: #8F6922;
+    --color-espresso: #29170F;
+    --color-espresso-light: #3D2418;
+    --color-beige: #E7D9C5;
+    --color-warm-white: #FAF8F5;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #F7F1E7;
+    color: #29170F;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #F7F1E7;
+    color: #29170F;
+  }
+
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F1E7;
+}
+::-webkit-scrollbar-thumb {
+  background: #B58B3C;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8F6922;
+}
+
+/* Subtle gold foil shine animation */
+@keyframes goldShine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B58B3C 0%, #E5C378 50%, #8F6922 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, #B58B3C, #E7D9C5, #B58B3C) 1;
+}
+
+.glass-card {
+  background: rgba(247, 241, 231, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(181, 139, 60, 0.2);
+}
+
+.glass-card-dark {
+  background: rgba(41, 23, 15, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(181, 139, 60, 0.3);
+}
